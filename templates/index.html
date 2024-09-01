@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Booking Cancellation Prediction</title>
+    <link rel="stylesheet" href="../staticFiles/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Hotel Booking Cancellation Prediction</h1>
+        <form action="{{ url_for('predict') }}" method="post" class="form-grid">
+            <div class="grid-container">
+                <!-- Input Fields and Selects -->
+                <input type="number" placeholder="Lead Time" name="lead_time">
+                <select name="arrival_date_month">
+                    <option value="1">January</option>
+                    <option value="2">February</option>
+                    <option value="3">March</option>
+                    <option value="4">April</option>
+                    <option value="5">May</option>
+                    <option value="6">June</option>
+                    <option value="7">July</option>
+                    <option value="8">August</option>
+                    <option value="9">September</option>
+                    <option value="10">October</option>
+                    <option value="11">November</option>
+                    <option value="12">December</option>
+                </select>
+                <input type="number" placeholder="Arrival Date Week Number" name="arrival_date_week_number">
+                <input type="number" placeholder="Arrival Date Day of Month" name="arrival_date_day_of_month">
+                <input type="number" placeholder="Stays in Weekend Nights" name="stays_in_weekend_nights">
+                <input type="number" placeholder="Stays in Week Nights" name="stays_in_week_nights">
+                <input type="number" placeholder="Adults" name="adults">
+                <select name="is_repeated_guest">
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </select>
+                <input type="number" placeholder="Previous Cancellations" name="previous_cancellations">
+                <input type="number" placeholder="Previous Bookings Not Canceled" name="previous_bookings_not_canceled">
+                <input type="number" placeholder="Booking Changes" name="booking_changes">
+                <input type="number" placeholder="Days in Waiting List" name="days_in_waiting_list">
+                <input type="number" step="0.01" placeholder="ADR" name="adr">
+                <input type="number" placeholder="Required Car Parking Spaces" name="required_car_parking_spaces">
+                <input type="number" placeholder="Total of Special Requests" name="total_of_special_requests">
+                <input type="number" placeholder="Kids" name="kids">
+                <select name="hotel">
+                    <option value="City Hotel">City Hotel</option>
+                    <option value="Resort Hotel">Resort Hotel</option>
+                </select>
+                <select name="meal">
+                    <option value="BB">BB</option>
+                    <option value="FB">FB</option>
+                    <option value="HB">HB</option>
+                    <option value="SC">SC</option>
+                    <option value="Undefined">Undefined</option>
+                </select>
+                <select name="country">
+                    <option value="ABW">ABW</option>
+                    <option value="AGO">AGO</option>
+                    <option value="AIA">AIA</option>
+                </select>
+                <select name="market_segment">
+                    <option value="Aviation">Aviation</option>
+                    <option value="SC">SC</option>
+                </select>
+                <select name="distribution_channel">
+                    <option value="Corporate">Corporate</option>
+                    <option value="SC">SC</option>
+                </select>
+                <select name="reserved_room_type">
+                    <option value="A">A</option>
+                </select>
+                <select name="deposit_type">
+                    <option value="No Deposit">No Deposit</option>
+                </select>
+                <select name="customer_type">
+                    <option value="Contract">Contract</option>
+                </select>
+            </div>
+            <button type="submit" class="submit-button">Predict</button>
+        </form>
+
+        <br><br>
+        <h2>{{ prediction_text }}</h2>
+    </div>
+</body>
+</html>
