@@ -1,6 +1,8 @@
 body {
   font-family: Arial, sans-serif;
-  background-image:  linear-gradient(to bottom right , rgb(143, 192, 226), rgb(214, 225, 89));; /* Updated gradient direction */
+ /* background-image:  linear-gradient(to bottom right , rgb(143, 192, 226), rgb(214, 225, 89)); */
+  /* Updated gradient direction */
+  background-color:white;
   margin: 0;
   padding: 0;
   display: flex;
