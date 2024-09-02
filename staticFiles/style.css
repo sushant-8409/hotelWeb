@@ -1,8 +1,9 @@
 body {
   font-family: Arial, sans-serif;
- /* background-image:  linear-gradient(to bottom right , rgb(143, 192, 226), rgb(214, 225, 89)); */
-  /* Updated gradient direction */
-  background-color:white;
+  /* background-image:  linear-gradient(to bottom right , rgb(143, 192, 226), rgb(214, 225, 89));
+   Updated gradient direction */
+   background-image: linear-gradient(to bottom right, red, blue);
+   
   margin: 0;
   padding: 0;
   display: flex;
@@ -14,8 +15,8 @@ body {
 .container {
   /* background: white;  */
   /* Added solid background to make sure text is readable */
- /* background-image: linear-gradient(to bottom right, red, blue); */
-  background-color:white;
+  /* background-image: linear-gradient(to bottom right, red, blue); */
+  background-image:  linear-gradient(to bottom right , rgb(143, 192, 226), rgb(214, 225, 89));
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
